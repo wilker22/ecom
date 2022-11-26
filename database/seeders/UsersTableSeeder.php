@@ -16,8 +16,8 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        
-        DB::table('users')->insert(
+
+        DB::table('users')->insert([
         //Admin
         [
           'name' => 'Admin',
@@ -30,7 +30,7 @@ class UsersTableSeeder extends Seeder
 
         //Vendor
         [
-            'name' => 'Wilker Vendor',
+            'name' => 'Vendor',
             'username' => 'vendor',
             'email' => 'vendor@gmail.com',
             'password' => Hash::make('111'),
@@ -46,7 +46,8 @@ class UsersTableSeeder extends Seeder
             'role' => 'user',
             'status' => 'active'
           ],
-        
-        );
+
+
+        ]);
     }
 }
