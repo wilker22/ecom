@@ -50,16 +50,23 @@ class AdminController extends Controller
 
         if($request->file('photo')){
             $file = $request->file('photo');
-            unlink(public_path('upload/admin_images/'.$data->photo));
+            @unlink(public_path('upload/admin_images/'.$data->photo));
+            //unlink(public_path('upload/admin_images/'.$data->photo));
             $filename = date('dmYHi').$file->getClientOriginalName();
             $file->move(public_path('upload/admin_images'), $filename);
             $data['photo'] = $filename;
 
         }
 
+
         $data->save();
 
-        return redirect()->back();
+        $notificatiion = [
+            'message' => 'Perfil atualizado com sucesso!',
+            'alert-type' => 'success'
+        ];
+
+        return redirect()->back()->with($notificatiion);
 
     }
 

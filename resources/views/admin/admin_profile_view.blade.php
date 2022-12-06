@@ -78,7 +78,7 @@
                             <div class="card-body">
                                 <div class="row mb-3">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">User Name</h6>
+                                        <h6 class="mb-0">Usuário</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
                                         <input type="text" class="form-control" value="{{ $adminData->username }}"
@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Full Name</h6>
+                                        <h6 class="mb-0">Nome Completo</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
                                         <input type="text" name="name" class="form-control"
@@ -96,7 +96,7 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Email</h6>
+                                        <h6 class="mb-0">E-mail</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
                                         <input type="email" name="email" class="form-control"
@@ -105,7 +105,7 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Phone </h6>
+                                        <h6 class="mb-0">Telefone </h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
                                         <input type="text" name="phone" class="form-control"
@@ -116,7 +116,7 @@
 
                                 <div class="row mb-3">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Address</h6>
+                                        <h6 class="mb-0">Endereço</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
                                         <input type="text" name="address" class="form-control"
@@ -128,7 +128,7 @@
 
                                 <div class="row mb-3">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Photo</h6>
+                                        <h6 class="mb-0">Foto</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
                                         <input type="file" name="photo" class="form-control" id="image" />
