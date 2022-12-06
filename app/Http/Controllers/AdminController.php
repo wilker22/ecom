@@ -75,27 +75,27 @@ class AdminController extends Controller
         return view('admin.admin_change_password');
     } 
 
-    public function AdminUpdatePassword(Request $request)
-    {
-        //Validation
+    public function AdminUpdatePassword(Request $request){
+        // Validation 
         $request->validate([
             'old_password' => 'required',
-            'new_password' => 'required|confirmed'
+            'new_password' => 'required|confirmed', 
         ]);
 
-        //match the old password
-        if(!Hash::check($request->old, auth()->user()->password)){
-            return back()->with("error", "Antiga senha não confere!");
+        // Match The Old Password
+        if (!Hash::check($request->old_password, auth::user()->password)) {
+            return back()->with("error", "Senha antiga não confere!!");
         }
 
-        //Update the new password
+        // Update The new password 
         User::whereId(auth()->user()->id)->update([
             'password' => Hash::make($request->new_password)
+
         ]);
+        return back()->with("status", "Senha atualizada com sucesso!");
 
-        return back()->with('status', "Senha atualizada com sucesso!");
+    } 
 
-    }
 
     
 
